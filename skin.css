@@ -1,0 +1,56 @@
+/* DualSense skin (1x) for GamePad Viewer
+   Load with:  ...&css=<raw GitHub link to this file>   (OBS browser source: 756 x 618)
+   base.png, pressed.png and sticks.png must sit in the same folder as this file. */
+
+#gamepads .controller {
+  background: url(base.png) no-repeat 0 0 !important; background-size: auto !important;
+  width:756px !important; height:618px !important; }
+#gamepads .controller.disconnected { opacity:.45; }
+/* performance: keep everything on the GPU compositor, isolate repaints to the controller */
+#gamepads .controller { contain: layout paint; isolation: isolate; }
+#gamepads .controller .button.a, #gamepads .controller .button.b, #gamepads .controller .button.x, #gamepads .controller .button.y, #gamepads .controller .face.up, #gamepads .controller .face.down, #gamepads .controller .face.left, #gamepads .controller .face.right, #gamepads .controller .back, #gamepads .controller .start, #gamepads .controller .meta, #gamepads .controller .touchpad, #gamepads .controller .bumper.left, #gamepads .controller .bumper.right, #gamepads .controller .trigger.left, #gamepads .controller .trigger.right, #gamepads .controller .stick, #gamepads .controller::before, #gamepads .controller::after { will-change: opacity, transform; backface-visibility: hidden; }
+#gamepads .controller .triggers, #gamepads .controller .bumpers, #gamepads .controller .arrows, #gamepads .controller .abxy, #gamepads .controller .sticks, #gamepads .controller .dpad {
+  position:absolute !important; left:0 !important; top:0 !important; width:756px !important; height:618px !important;
+  margin:0 !important; padding:0 !important; background:none !important; }
+#gamepads .controller .quadrant, #gamepads .controller .clear, #gamepads .controller .wheels, #gamepads .controller .fstick, #gamepads .controller .trigger-button { display:none !important; }
+
+/* lit pieces: hidden until pressed */
+#gamepads .controller .button.a, #gamepads .controller .button.b, #gamepads .controller .button.x, #gamepads .controller .button.y, #gamepads .controller .face.up, #gamepads .controller .face.down, #gamepads .controller .face.left, #gamepads .controller .face.right, #gamepads .controller .back, #gamepads .controller .start, #gamepads .controller .meta, #gamepads .controller .touchpad, #gamepads .controller .bumper.left, #gamepads .controller .bumper.right, #gamepads .controller .trigger.left, #gamepads .controller .trigger.right {
+  position:absolute !important; margin:0 !important; padding:0 !important; float:none !important; transform:none !important;
+  opacity:0; background-image:url(pressed.png) !important; background-repeat:no-repeat !important; background-size:auto !important; }
+#gamepads .controller .button.a.pressed, #gamepads .controller .button.b.pressed, #gamepads .controller .button.x.pressed, #gamepads .controller .button.y.pressed, #gamepads .controller .face.up.pressed, #gamepads .controller .face.down.pressed, #gamepads .controller .face.left.pressed, #gamepads .controller .face.right.pressed, #gamepads .controller .back.pressed, #gamepads .controller .start.pressed, #gamepads .controller .meta.pressed, #gamepads .controller .touchpad.pressed, #gamepads .controller .bumper.left.pressed, #gamepads .controller .bumper.right.pressed { opacity:1; }
+/* triggers: the viewer drives opacity (or a fill clip with &smeter=1) live */
+#gamepads .controller .trigger.pressed { opacity:1; }
+
+#gamepads .controller .button.a { left:568px !important; top:278px !important; right:auto !important; bottom:auto !important; width:70px !important; height:70px !important; background-position:-213px -0px !important; }
+#gamepads .controller .button.b { left:621px !important; top:225px !important; right:auto !important; bottom:auto !important; width:69px !important; height:69px !important; background-position:-71px -0px !important; }
+#gamepads .controller .button.x { left:515px !important; top:225px !important; right:auto !important; bottom:auto !important; width:69px !important; height:69px !important; background-position:-142px -0px !important; }
+#gamepads .controller .button.y { left:568px !important; top:172px !important; right:auto !important; bottom:auto !important; width:69px !important; height:69px !important; background-position:-0px -0px !important; }
+#gamepads .controller .face.up { left:120px !important; top:187px !important; right:auto !important; bottom:auto !important; width:66px !important; height:76px !important; background-position:-285px -0px !important; }
+#gamepads .controller .face.down { left:120px !important; top:257px !important; right:auto !important; bottom:auto !important; width:66px !important; height:76px !important; background-position:-353px -0px !important; }
+#gamepads .controller .face.left { left:80px !important; top:226px !important; right:auto !important; bottom:auto !important; width:75px !important; height:67px !important; background-position:-421px -0px !important; }
+#gamepads .controller .face.right { left:150px !important; top:226px !important; right:auto !important; bottom:auto !important; width:75px !important; height:67px !important; background-position:-498px -0px !important; }
+#gamepads .controller .back { left:188px !important; top:154px !important; right:auto !important; bottom:auto !important; width:42px !important; height:54px !important; background-position:-575px -0px !important; }
+#gamepads .controller .start { left:525px !important; top:154px !important; right:auto !important; bottom:auto !important; width:43px !important; height:54px !important; background-position:-619px -0px !important; }
+#gamepads .controller .meta { left:357px !important; top:334px !important; right:auto !important; bottom:auto !important; width:43px !important; height:43px !important; background-position:-664px -0px !important; }
+#gamepads .controller .touchpad { left:224px !important; top:118px !important; right:auto !important; bottom:auto !important; width:307px !important; height:175px !important; background-position:-0px -250px !important; }
+#gamepads .controller .bumper.left { left:95px !important; top:112px !important; right:auto !important; bottom:auto !important; width:116px !important; height:53px !important; background-position:-709px -0px !important; }
+#gamepads .controller .bumper.right { left:545px !important; top:112px !important; right:auto !important; bottom:auto !important; width:116px !important; height:54px !important; background-position:-0px -78px !important; }
+#gamepads .controller .trigger.left { left:93px !important; top:13px !important; right:auto !important; bottom:auto !important; width:121px !important; height:113px !important; background-position:-118px -78px !important; }
+#gamepads .controller .trigger.right { left:542px !important; top:13px !important; right:auto !important; bottom:auto !important; width:121px !important; height:113px !important; background-position:-241px -78px !important; }
+
+/* thumbsticks: move + tilt with your thumbs, light up on L3 / R3 */
+#gamepads .controller .stick.left { position:absolute !important; left:205px !important; top:301px !important; right:auto !important; bottom:auto !important; width:115px !important; height:115px !important; background:url(sticks.png) 0 0 no-repeat !important; }
+#gamepads .controller .stick.right { position:absolute !important; left:434px !important; top:301px !important; right:auto !important; bottom:auto !important; width:115px !important; height:115px !important; background:url(sticks.png) 0 0 no-repeat !important; }
+#gamepads .controller .stick.pressed { background-position:-115px 0 !important; }
+
+/* light bar: always on while connected (gentle pulse), off when disconnected */
+#gamepads .controller::before, #gamepads .controller::after {
+  content:""; position:absolute; pointer-events:none;
+  background:url(pressed.png) no-repeat;
+  animation: gpv-lb-breathe 3.2s ease-in-out infinite; }
+#gamepads .controller::before { left:219px; top:128px; width:317px; height:170px; background-position:-364px -78px; }
+#gamepads .controller::after  { left:346px; top:270px; width:64px; height:30px; background-position:-683px -78px; }
+@keyframes gpv-lb-breathe { 0%, 100% { opacity:.82; } 50% { opacity:1; } }
+#gamepads .controller.disconnected::before, #gamepads .controller.disconnected::after { animation:none; opacity:0; }
+#gamepads .controller.disconnected .button.a, #gamepads .controller.disconnected .button.b, #gamepads .controller.disconnected .button.x, #gamepads .controller.disconnected .button.y, #gamepads .controller.disconnected .face.up, #gamepads .controller.disconnected .face.down, #gamepads .controller.disconnected .face.left, #gamepads .controller.disconnected .face.right, #gamepads .controller.disconnected .back, #gamepads .controller.disconnected .start, #gamepads .controller.disconnected .meta, #gamepads .controller.disconnected .touchpad, #gamepads .controller.disconnected .bumper.left, #gamepads .controller.disconnected .bumper.right, #gamepads .controller.disconnected .trigger.left, #gamepads .controller.disconnected .trigger.right { opacity:0 !important; }
